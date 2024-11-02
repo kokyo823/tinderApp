@@ -5,7 +5,7 @@
 //  Created by 杉山誇京 on 2024/10/26.
 //
 // Viewファイルは「Modelの状態の変更をViewに通知する役割」を担当するもの
-//　このファイルはモデルを定義するときに使う。（表示要素などはListViewで、内部の処理などはListViewModelでコードを記載する）
+
 
 import Foundation
 
@@ -31,34 +31,26 @@ class ListViewModel{
         ]
     }
     
-    func nopeButtontapped() {
-        
-        if currentIndex >= users.count { return }
-        
-        NotificationCenter.default.post(name: Notification.Name("NOPEACTION"), object: nil, userInfo: [
-            "id": users[currentIndex].id
-        ])
-        
-        currentIndex += 1
+    func adjustIndex(isRedo: Bool){
+        if isRedo {
+            currentIndex -= 1
+        } else{
+            currentIndex += 1
+        }
     }
-    func likeButtontapped() {
+    
+    func tappedHandler(action: Action){
+        switch action {
+            
+        case .nope, .like:
+            if currentIndex >= users.count { return }
+        case .redo:
+            if currentIndex <= 0 { return }
+        }
         
-        if currentIndex >= users.count { return }
-        
-        NotificationCenter.default.post(name: Notification.Name("LIKEACTION"), object: nil, userInfo: [
-            "id": users[currentIndex].id
+        NotificationCenter.default.post(name: Notification.Name("ACTIONFROMBUTTON"), object: nil, userInfo: [
+            "id": action == .redo ? users[currentIndex - 1].id : users[currentIndex].id,
+            "action": action
         ])
-        
-        currentIndex += 1
-    }
-    func redoButtontapped() {
-        
-        if currentIndex <= 0 { return }
-        
-        NotificationCenter.default.post(name: Notification.Name("REDOACTION"), object: nil, userInfo: [
-            "id": users[currentIndex - 1].id
-        ])
-        
-        currentIndex -= 1
     }
 }

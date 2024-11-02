@@ -53,7 +53,9 @@ extension ListView{
             //ForEachの引数には、viewModelで定義しているusersを逆順で設定する
             //CaedViewにuserを渡す。
             ForEach(viewModel.users.reversed()) { user in
-                CardView(user: user)
+                CardView(user: user) { isRedo in
+                    viewModel.adjustIndex(isRedo: isRedo)
+                }
             }
         }
     }
@@ -63,7 +65,7 @@ extension ListView{
         HStack(spacing: 60){
             Button {
                 // viewModelの中で定義しているnopeButtontappedメソッドを発火させる
-                viewModel.nopeButtontapped()
+                viewModel.tappedHandler(action: .nope)
             } label: {
                 Image(systemName: "xmark")
                     .font(.system(size: 26, weight: .bold))
@@ -75,7 +77,7 @@ extension ListView{
                     }
             }
             Button {
-                viewModel.redoButtontapped()
+                viewModel.tappedHandler(action: .redo)
             } label: {
                 Image(systemName: "arrow.counterclockwise")
                     .font(.system(size: 26, weight: .bold))
@@ -87,7 +89,7 @@ extension ListView{
                     }
             }
             Button {
-                viewModel.likeButtontapped()
+                viewModel.tappedHandler(action: .like)
             } label: {
                 Image(systemName: "heart")
                     .font(.system(size: 26, weight: .bold))
