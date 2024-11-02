@@ -16,6 +16,7 @@
 		28275EE82CD607BC0000F6B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28275ED62CD607BC0000F6B2 /* Preview Assets.xcassets */; };
 		28275EE92CD607BC0000F6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28275EDE2CD607BC0000F6B2 /* Assets.xcassets */; };
 		28A79F3B2CD60906004C61CF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A79F3A2CD60906004C61CF /* Action.swift */; };
+		28A79F3D2CD61967004C61CF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A79F3C2CD61967004C61CF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		28275EDF2CD607BC0000F6B2 /* MachingWithSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MachingWithSwiftUI.entitlements; sourceTree = "<group>"; };
 		28275EE02CD607BC0000F6B2 /* MachingWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachingWithSwiftUIApp.swift; sourceTree = "<group>"; };
 		28A79F3A2CD60906004C61CF /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		28A79F3C2CD61967004C61CF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				28A79F3A2CD60906004C61CF /* Action.swift */,
+				28A79F3C2CD61967004C61CF /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				28275EE22CD607BC0000F6B2 /* User.swift in Sources */,
 				28275EE32CD607BC0000F6B2 /* ListViewModel.swift in Sources */,
 				28275EE42CD607BC0000F6B2 /* CardView.swift in Sources */,
+				28A79F3D2CD61967004C61CF /* Extensions.swift in Sources */,
 				28275EE52CD607BC0000F6B2 /* ContentView.swift in Sources */,
 				28A79F3B2CD60906004C61CF /* Action.swift in Sources */,
 				28275EE62CD607BC0000F6B2 /* ListView.swift in Sources */,

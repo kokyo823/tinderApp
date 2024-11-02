@@ -3,8 +3,6 @@
 //  MachingWithSwiftUI
 //
 //  Created by 杉山誇京 on 2024/10/26.
-//
-// Viewファイルは「Modelの状態の変更をViewに通知する役割」を担当するもの
 
 
 import Foundation
