@@ -1,1 +1,1 @@
-Udemeyにおいて、SwiftUIでtindernUIの作成方法を学習
+Udemyにおいて、SwiftUIでtindernUIの作成方法を学習
