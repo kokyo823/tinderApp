@@ -1,1 +1,1 @@
-Hello
+Udemeyにおいて、SwiftUI × firebaseでtindernUIの作成方法を学習中
